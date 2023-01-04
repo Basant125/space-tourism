@@ -1,0 +1,8 @@
+.main {
+    position: relative;
+    /* background-image: url(../../assets/home/background-home-desktop.jpg); */
+    min-height: 100vh;
+    /* background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+}

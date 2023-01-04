@@ -1,0 +1,123 @@
+.home {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: url(../../assets/home/background-home-mobile.jpg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home_content {
+    width: 90%;
+    margin: 0px auto;
+}
+
+.home_content div {
+    float: left;
+    width: 100%;
+}
+
+.home_content::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.home_info {
+    text-align: center;
+}
+
+.home_info span {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.9rem;
+    color: #fff;
+}
+
+.home_info h1 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 8rem;
+    color: #fff;
+    font-weight: 400;
+    margin: 0px;
+}
+
+.home_info p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: .9rem;
+    color: #fff;
+    word-spacing: 1px;
+}
+
+.home_circle {
+    position: relative;
+    text-align: right;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.video {
+    display: none !important;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 99;
+}
+
+.home_circle:hover .video {
+    display: block !important;
+}
+
+.home_circle :hover .home {
+    background-image: none !important;
+}
+
+.home_circle span {
+    display: block;
+    background-color: #fff;
+    padding: 2rem;
+    width: 180px;
+    height: 180px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+
+
+
+
+
+@media screen and (min-width: 992px) {
+    .home {
+        background-image: url('../../assets/home/background-home-desktop.jpg');
+    }
+
+    .home_content div {
+        width: 40%;
+    }
+
+    .home_info {
+        text-align: left;
+    }
+
+    .home_circle {
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+}
