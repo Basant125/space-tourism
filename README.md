@@ -2,5 +2,5 @@
 
 Working on................................................................
 
-demo : https://space360.netlify.app/destination
+demo : https://space360.netlify.app/
 
