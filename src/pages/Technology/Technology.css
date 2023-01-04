@@ -13,3 +13,120 @@
     align-items: center;
     padding-bottom: 2rem;
 }
+
+.technology_container {
+    /* width: 95%; */
+    margin: 120px auto 0px auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    columns: 20px;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 2rem; */
+}
+
+.technology_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn_group_technolgy {
+    min-width: 230px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    row-gap: 20px;
+    column-gap: 20px;
+    align-items: center;
+}
+
+.btn_group_technolgy button {
+    width: 40px;
+    height: 40px;
+    outline: none;
+    border-radius: 100%;
+    text-align: center;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn_group_technolgy button:not(.background_color):hover {
+    opacity: 0.8;
+}
+
+.border {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.background_color {
+    background-color: #fff;
+    color: #000;
+    border: none;
+}
+
+.technology_right img {
+    width: 100%;
+    max-width: 400px;
+    height: auto
+}
+
+.technolgy_info {
+    padding: 1rem;
+    text-align: center;
+}
+
+.technolgy_info span,
+.technolgy_info h2,
+.technolgy_info p {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1rem;
+    color: #ffff;
+    font-weight: 500;
+}
+
+.technolgy_info h2 {
+    font-size: 3rem !important;
+    font-weight: 500;
+    margin: 4px 0px 8px 0px;
+}
+
+.technolgy_info p {
+    font-size: 1.2rem;
+}
+
+
+@media screen and (min-width : 992px) {
+    .technology_container {
+        flex-direction: row;
+    }
+
+    .technology_right img {
+        width: 100%;
+        min-width: 400px;
+        height: 400px;
+    }
+
+    .technology_left {
+        flex-direction: row;
+    }
+
+    .btn_group_technolgy button {
+        width: 80px;
+        height: 80px;
+    }
+
+    .btn_group_technolgy {
+        flex-direction: column;
+    }
+
+    .technolgy_info {
+        text-align: left;
+    }
+}

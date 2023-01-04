@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import './Crew.css'
 import { Swiper, SwiperSlide } from "swiper/react";
 import { data } from '../../data'
@@ -8,16 +8,13 @@ import "swiper/css/effect-creative";
 import "swiper/css/effect-cube";
 import "swiper/css/pagination";
 // import required modules
-import { Pagination, EffectCube } from "swiper";
+import { Pagination, EffectCube, Autoplay, Navigation } from "swiper";
 
 const Crew = () => {
     const [count, setCount] = useState(0)
     const [crew, setCrew] = useState(data.crew);
     const [currentData, setCurrentData] = useState(data.crew[0]);
-    const handleClick = (ind) => {
-        setCount(ind)
-        console.log(ind, 'index')
-    }
+    const swiperRef = useRef(null)
 
     const instantCall = (value) => {
         setCurrentData(data.destinations[value])
@@ -30,14 +27,22 @@ const Crew = () => {
         <Swiper
             effect={"cube"}
             grabCursor={true}
+            loop={true}
             cubeEffect={{
                 shadow: false,
                 slideShadows: false,
                 shadowOffset: 0,
                 shadowScale: 0,
             }}
-            pagination={true}
-            modules={[EffectCube, Pagination]}
+            pagination={{ clickable: true }}
+            autoplay={{
+                delay: 3000,
+                pauseOnMouseEnter: true,
+                disableOnInteraction: false,
+            }}
+            onMouseEnter={() => swiperRef.current.swiper.autoplay.stop()}
+            onMouseLeave={() => swiperRef.current.swiper.autoplay.start()}
+            modules={[Autoplay, EffectCube, Pagination, Navigation]}
             className="mySwiper"
         >
             {

@@ -17,6 +17,7 @@
 .home_content {
     width: 90%;
     margin: 0px auto;
+    padding: 10rem 0rem 0rem 0rem;
 }
 
 .home_content div {
@@ -65,19 +66,6 @@
     margin-top: 4rem;
 }
 
-.video {
-    display: none !important;
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: 99;
-}
-
-.home_circle:hover .video {
-    display: block !important;
-}
 
 .home_circle :hover .home {
     background-image: none !important;
@@ -86,6 +74,7 @@
 .home_circle span {
     display: block;
     background-color: #fff;
+    color: #444;
     padding: 2rem;
     width: 180px;
     height: 180px;
